@@ -1,0 +1,38 @@
+<?php
+
+return [
+
+    'description',
+    'answer',
+    'summery',
+    'note',
+    'notes',
+    'project_summary',
+    'reply_heading',
+    'comment',
+    'message',
+    'details',
+    // Modules
+    'job_description',
+    'meta_description',
+    'cover_letter',
+    'candidate_comment',
+    'remark',
+    'reason',
+    'about',
+    'internal_note',
+    'billing_address',
+    'shipping_address',
+    'item_summary',
+    'note_details',
+    'footer_script',
+    'header_script',
+    'header_description',
+    'message2',
+    'editedMessage',
+    'contact_html',
+    // Custom code fields (super-admin settings) — store raw HTML/CSS/JS
+    'custom_head_html',
+    'custom_css',
+    'custom_js',
+];
