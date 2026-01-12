@@ -1,0 +1,79 @@
+// ============================================================================
+// Anagami ERP Redesign — Cards (additional to Bootstrap overrides)
+// ============================================================================
+
+// Stat/KPI cards (dashboard)
+.card-horizontal {
+  border-radius: $r-border-radius;
+  overflow: hidden;
+}
+
+.card-img {
+  border-radius: $r-border-radius-sm;
+  overflow: hidden;
+}
+
+.card-img-small {
+  border-radius: $r-border-radius-sm;
+  border-color: $r-border-color;
+}
+
+.card-title {
+  font-size: $r-text-md;
+  font-weight: 600;
+  color: $r-text-primary;
+  margin-bottom: $r-space-2;
+}
+
+.card-text {
+  font-size: $r-text-sm;
+  color: $r-text-secondary;
+}
+
+// Hover effect for interactive cards
+.card-hover {
+  @include hover-lift;
+}
+
+// Stat number in KPI cards
+.card .stat-number {
+  font-size: $r-text-3xl;
+  font-weight: 700;
+  color: $r-text-primary;
+  line-height: 1.2;
+}
+
+.card .stat-label {
+  font-size: $r-text-xs;
+  color: $r-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+// Percentage change indicator
+.card .stat-change {
+  font-size: $r-text-xs;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 6px;
+  border-radius: $r-border-radius-pill;
+
+  &.positive {
+    color: $r-success;
+    background-color: $r-success-light;
+  }
+
+  &.negative {
+    color: $r-danger;
+    background-color: $r-danger-light;
+  }
+}
+
+// White card on body bg
+.bg-white-shade {
+  background-color: $r-body-bg !important;
+  border-radius: $r-border-radius;
+}

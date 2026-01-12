@@ -1,0 +1,225 @@
+// ============================================================================
+// Anagami ERP Redesign — Header / Top Bar (Aggressive Override)
+// ============================================================================
+// Targets exact classes from topbar.blade.php
+
+.main-header {
+  height: $r-header-height !important;
+  background-color: $r-header-bg !important;
+  border-bottom: 1px solid $r-border-color !important;
+  margin-left: $r-sidebar-width !important;
+  z-index: 2 !important;
+
+  // Override bg-white utility class
+  &.bg-white {
+    background-color: $r-header-bg !important;
+  }
+
+  // Override any inline background-color from theme settings
+  &[style*="background-color"],
+  &[style*="background"] {
+    background-color: $r-header-bg !important;
+  }
+
+  .navbar-left {
+    height: $r-header-height !important;
+    padding-left: $r-space-6 !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0 !important;
+  }
+}
+
+// Page heading in header
+.page-heading {
+  h2 {
+    font-size: $r-text-lg !important;
+    font-weight: 600 !important;
+    color: $r-text-primary !important;
+    margin: 0 !important;
+  }
+}
+
+// Breadcrumb text
+.page-heading .text-lightest,
+.page-heading .text-dark-grey {
+  color: $r-text-muted !important;
+  font-size: $r-text-sm !important;
+}
+
+// Header right section
+.page-header-right {
+  height: $r-header-height !important;
+  padding-right: $r-space-6 !important;
+
+  // Space out the header icon list items
+  ul {
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
+
+    > li {
+      display: flex !important;
+      align-items: center !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+// Header icon styling
+.header-icon-box {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 0 !important;
+
+  // Icon links
+  > a, .header-icon {
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: $r-border-radius-sm !important;
+    transition: all $r-transition-fast !important;
+
+    &:hover {
+      background-color: $r-body-bg !important;
+    }
+
+    // Icons inside — clean modern style
+    i {
+      font-size: 18px !important;
+      color: $r-text-secondary !important;
+      line-height: 1 !important;
+    }
+
+    // Override f-16 on header icons
+    i.f-16 {
+      font-size: 18px !important;
+    }
+
+    .text-dark-grey {
+      color: $r-text-secondary !important;
+    }
+  }
+
+  // Notification count badge — override theme_css.blade.php
+  .unread-notifications-count,
+  .active-timer-count,
+  .badge-primary {
+    background-color: $r-danger !important;
+    border: 2px solid $r-header-bg !important;
+    min-width: 18px !important;
+    height: 18px !important;
+    font-size: 9px !important;
+    line-height: 14px !important;
+    padding: 0 4px !important;
+    border-radius: $r-border-radius-pill !important;
+    top: -4px !important;
+    right: -4px !important;
+    color: #fff !important;
+  }
+}
+
+// Notification dropdown
+.notification-dropdown {
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-xl !important;
+  border: 1px solid $r-border-color !important;
+  padding: 0 !important;
+
+  &.bg-additional-grey {
+    background-color: $r-body-bg !important;
+  }
+
+  .bg-white {
+    background-color: $r-card-bg !important;
+  }
+
+  .dropdown-item {
+    padding: 10px 16px !important;
+    border-bottom: 1px solid $r-border-color !important;
+    font-size: $r-text-sm !important;
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+
+    &:hover {
+      background-color: $r-body-bg !important;
+    }
+  }
+}
+
+// User/Logout dropdown
+.logout_box {
+  .header-icon-box {
+    margin-right: 0 !important;
+  }
+}
+
+// Menu collapse (hamburger) button
+.menu-collapse {
+  &:before {
+    display: none !important;
+  }
+}
+
+.mc-wrap .mcw-line {
+  background-color: $r-text-secondary !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+}
+
+// Header buttons (Stop Impersonation, Upgrade Plan, etc.)
+.header-saas-btn {
+  .btn {
+    border-radius: $r-border-radius-sm !important;
+    font-size: $r-text-xs !important;
+    padding: 6px 14px !important;
+    font-weight: 500 !important;
+  }
+}
+
+// Invite member text
+.invite-member span {
+  font-size: $r-text-sm !important;
+  color: $r-text-secondary !important;
+}
+
+// Add button dropdown in header
+.main-header .dropdown-menu {
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-lg !important;
+  border: 1px solid $r-border-color !important;
+  padding: $r-space-2 !important;
+
+  .dropdown-item {
+    border-radius: $r-border-radius-xs !important;
+    padding: 8px 12px !important;
+    font-size: $r-text-sm !important;
+    color: $r-text-primary !important;
+
+    // Override text-dark class
+    &.text-dark {
+      color: $r-text-primary !important;
+    }
+
+    &:hover, &:focus {
+      background-color: $r-body-bg !important;
+      color: $r-text-primary !important;
+    }
+
+    // Override theme_css: .dropdown-item.active
+    &.active {
+      background-color: $r-primary-light !important;
+      color: $r-primary !important;
+    }
+  }
+}

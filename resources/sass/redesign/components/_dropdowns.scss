@@ -1,0 +1,55 @@
+// ============================================================================
+// Anagami ERP Redesign — Dropdowns (additional to Bootstrap overrides)
+// ============================================================================
+
+// Dashboard settings dropdown
+.dropdown-menu.dashboard-settings {
+  border-radius: $r-border-radius;
+  box-shadow: $r-shadow-lg;
+  border: 1px solid $r-border-color;
+}
+
+// More filters dropdown
+.more-filters {
+  .more-filter-tab {
+    border: 1px solid $r-border-color;
+    border-radius: $r-border-radius;
+    box-shadow: $r-shadow-lg;
+    background-color: $r-card-bg;
+
+    &.in {
+      .clear-all {
+        border-top-color: $r-border-color;
+      }
+    }
+  }
+}
+
+// Dropup styling
+.dropup .dropdown-menu {
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-lg;
+}
+
+// ---------------------------------------------------------------------------
+// Filter area select boxes — compact styling
+// ---------------------------------------------------------------------------
+.filter-box .select-box,
+.filter-box .select-status {
+  .bootstrap-select > .dropdown-toggle {
+    padding: 6px 10px !important;
+    font-size: $r-text-sm !important;
+    min-height: auto !important;
+  }
+}
+
+// Action dropdown (three-dot menu on table rows)
+.dropdown-menu[aria-labelledby] {
+  min-width: 140px !important;
+  padding: $r-space-1 !important;
+
+  .dropdown-item {
+    padding: 6px 12px !important;
+    font-size: $r-text-sm !important;
+  }
+}

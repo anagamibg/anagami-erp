@@ -1,0 +1,785 @@
+// ============================================================================
+// Anagami ERP Redesign — Bootstrap 4 & Anagami ERP Overrides (Aggressive)
+// ============================================================================
+// Uses !important throughout to override inline styles, theme_css.blade.php,
+// and utility classes with !important.
+
+// ---------------------------------------------------------------------------
+// Body
+// ---------------------------------------------------------------------------
+body {
+  background-color: $r-body-bg !important;
+  color: $r-text-primary !important;
+}
+
+// ---------------------------------------------------------------------------
+// Cards
+// ---------------------------------------------------------------------------
+.card {
+  background-color: $r-card-bg !important;
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-sm !important;
+  transition: box-shadow $r-transition !important;
+
+  // Don't lift on hover — too distracting for all cards
+  &:hover {
+    transform: none !important;
+    box-shadow: $r-shadow !important;
+  }
+}
+
+// Override b-shadow-4 utility (used heavily)
+.b-shadow-4 {
+  box-shadow: $r-shadow-sm !important;
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+}
+
+// Card with border-0 override
+.card.border-0 {
+  border: 1px solid $r-border-color !important;
+}
+
+.card.b-shadow-4.border-0,
+.card.b-shadow-4 {
+  border: 1px solid $r-border-color !important;
+  box-shadow: $r-shadow-sm !important;
+  border-radius: $r-border-radius !important;
+}
+
+.card-header {
+  background-color: transparent !important;
+  border-bottom: 1px solid $r-border-color !important;
+  padding: $r-card-padding !important;
+}
+
+.card-body {
+  padding: $r-card-padding !important;
+}
+
+.card-footer {
+  background-color: transparent !important;
+  border-top: 1px solid $r-border-color !important;
+  padding: $r-card-padding !important;
+}
+
+.card-title {
+  font-size: $r-text-md !important;
+  font-weight: 600 !important;
+  color: $r-text-primary !important;
+}
+
+// ---------------------------------------------------------------------------
+// Buttons — override theme_css.blade.php var(--header_color)
+// ---------------------------------------------------------------------------
+.btn {
+  border-radius: $r-border-radius-sm !important;
+  font-weight: 500 !important;
+  font-size: $r-text-sm !important;
+  padding: 8px 16px !important;
+  transition: all $r-transition !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.5 !important;
+
+  // No lift on hover
+  &:hover {
+    transform: none !important;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($r-primary, 0.15) !important;
+  }
+}
+
+// Override theme_css: .btn-primary { background-color: var(--header_color) !important; }
+.btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary:disabled:hover {
+  background-color: $r-primary !important;
+  border: 1px solid $r-primary !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: $r-primary-hover !important;
+  border-color: $r-primary-hover !important;
+  color: #fff !important;
+}
+
+.btn-primary:active {
+  background-color: $r-primary-dark !important;
+  border-color: $r-primary-dark !important;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: $r-primary !important;
+  border-color: $r-primary !important;
+  opacity: 0.5 !important;
+}
+
+.btn-secondary {
+  background-color: $r-card-bg !important;
+  border: 1px solid $r-border-color !important;
+  color: $r-text-secondary !important;
+
+  &:hover, &:focus {
+    background-color: $r-body-bg !important;
+    border-color: $r-text-muted !important;
+    color: $r-text-primary !important;
+  }
+}
+
+.btn-success {
+  background-color: $r-success !important;
+  border-color: $r-success !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: darken($r-success, 8%) !important;
+    border-color: darken($r-success, 8%) !important;
+  }
+}
+
+.btn-danger {
+  background-color: $r-danger !important;
+  border-color: $r-danger !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: darken($r-danger, 8%) !important;
+    border-color: darken($r-danger, 8%) !important;
+  }
+}
+
+.btn-warning {
+  background-color: $r-warning !important;
+  border-color: $r-warning !important;
+
+  &:hover {
+    background-color: darken($r-warning, 8%) !important;
+    border-color: darken($r-warning, 8%) !important;
+  }
+}
+
+.btn-info {
+  background-color: $r-info !important;
+  border-color: $r-info !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: darken($r-info, 8%) !important;
+    border-color: darken($r-info, 8%) !important;
+  }
+}
+
+.btn-outline-primary {
+  color: $r-primary !important;
+  border-color: $r-primary !important;
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: $r-primary !important;
+    color: #fff !important;
+  }
+}
+
+.btn-cancel {
+  background-color: $r-card-bg !important;
+  border: 1px solid $r-border-color !important;
+  color: $r-text-muted !important;
+  border-radius: $r-border-radius-sm !important;
+
+  &:hover {
+    background-color: $r-body-bg !important;
+    border-color: $r-text-muted !important;
+    color: $r-text-secondary !important;
+  }
+}
+
+.btn-sm {
+  padding: 5px 12px !important;
+  font-size: $r-text-xs !important;
+  border-radius: $r-border-radius-xs !important;
+}
+
+.btn-lg {
+  padding: 12px 24px !important;
+  font-size: $r-text-md !important;
+}
+
+// Active button override
+.btn-active, .btn-active.btn-secondary {
+  background-color: $r-primary !important;
+  border-color: $r-primary !important;
+  color: #fff !important;
+}
+
+// ---------------------------------------------------------------------------
+// Forms
+// ---------------------------------------------------------------------------
+.form-control {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+  padding: 8px 12px !important;
+  font-size: $r-text-sm !important;
+  color: $r-text-primary !important;
+  background-color: $r-card-bg !important;
+  transition: border-color $r-transition, box-shadow $r-transition !important;
+  height: auto !important;
+  box-shadow: none !important;
+
+  &:focus, &:hover {
+    border-color: $r-primary !important;
+    box-shadow: 0 0 0 3px rgba($r-primary, 0.1) !important;
+  }
+
+  &::placeholder {
+    color: $r-text-muted !important;
+  }
+}
+
+textarea.form-control {
+  min-height: 80px !important;
+}
+
+.input-group-text {
+  border: 1px solid $r-border-color !important;
+  background-color: $r-body-bg !important;
+  border-radius: $r-border-radius-sm !important;
+  color: $r-text-muted !important;
+  font-size: $r-text-sm !important;
+}
+
+// Form group
+.form-group {
+  label {
+    font-size: $r-text-sm !important;
+    font-weight: 500 !important;
+    color: $r-text-secondary !important;
+
+    sup {
+      color: $r-danger !important;
+    }
+  }
+}
+
+// Custom checkbox/radio — override theme_css: custom-control-input:checked
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $r-primary !important;
+  border-color: $r-primary !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 3px rgba($r-primary, 0.15) !important;
+}
+
+// Checkmark override
+.checkmark {
+  border-color: $r-primary !important;
+  border-radius: $r-border-radius-xs !important;
+}
+
+.form_custom_label input:checked ~ .checkmark {
+  background-color: $r-primary !important;
+}
+
+// Select2
+.select2-container--default .select2-selection--single {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+  height: 38px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 38px !important;
+  color: $r-text-primary !important;
+}
+
+.select2-dropdown {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+  box-shadow: $r-shadow-lg !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $r-primary-light !important;
+  color: $r-primary !important;
+}
+
+// Bootstrap-select
+.bootstrap-select > .dropdown-toggle {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+  background-color: $r-card-bg !important;
+  color: $r-text-primary !important;
+  font-size: $r-text-sm !important;
+  padding: 6px 12px !important;
+  height: auto !important;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba($r-primary, 0.1) !important;
+  }
+}
+
+// Bootstrap-select dropdown menu
+.bootstrap-select .dropdown-menu {
+  padding: $r-space-1 !important;
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-lg !important;
+  border: 1px solid $r-border-color !important;
+
+  .dropdown-item,
+  li a {
+    padding: 6px 12px !important;
+    font-size: $r-text-sm !important;
+    border-radius: $r-border-radius-xs !important;
+
+    &:hover, &:focus {
+      background-color: $r-body-bg !important;
+    }
+
+    &.active, &.selected, &:active {
+      background-color: $r-primary-light !important;
+      color: $r-primary !important;
+    }
+  }
+
+  .inner {
+    max-height: 250px !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Tables
+// ---------------------------------------------------------------------------
+.table {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+
+  thead th {
+    font-size: $r-text-xs !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: $r-text-muted !important;
+    border-bottom: 2px solid $r-border-color !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    padding: 12px 16px !important;
+    white-space: nowrap !important;
+    background-color: $r-body-bg !important;
+  }
+
+  td {
+    padding: 12px 16px !important;
+    font-size: $r-text-sm !important;
+    color: $r-text-primary !important;
+    border-bottom: 1px solid $r-border-color !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    vertical-align: middle !important;
+  }
+
+  tbody tr {
+    transition: background-color $r-transition-fast !important;
+
+    &:hover td {
+      background-color: rgba($r-primary, 0.02) !important;
+    }
+  }
+
+  thead th:first-child, tbody td:first-child {
+    padding-left: $r-card-padding !important;
+  }
+
+  thead th:last-child, tbody td:last-child {
+    padding-right: $r-card-padding !important;
+  }
+
+  // Override text color utilities in tables
+  tr td {
+    .text-darkest-grey {
+      color: $r-text-primary !important;
+    }
+    .text-dark-grey {
+      color: $r-text-secondary !important;
+    }
+    .text-lightest {
+      color: $r-text-muted !important;
+    }
+  }
+}
+
+// Tables wrapper
+.w-tables {
+  box-shadow: none !important;
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  overflow: hidden !important;
+}
+
+table.dataTable {
+  border-collapse: collapse !important;
+}
+
+// ---------------------------------------------------------------------------
+// Dropdowns
+// ---------------------------------------------------------------------------
+.dropdown-menu {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-lg !important;
+  padding: $r-space-2 !important;
+  margin-top: $r-space-2 !important;
+
+  .dropdown-item {
+    padding: 8px 16px !important;
+    font-size: $r-text-sm !important;
+    color: $r-text-primary !important;
+    transition: background-color $r-transition-fast !important;
+    border-radius: $r-border-radius-xs !important;
+
+    // Override text-dark utility
+    &.text-dark {
+      color: $r-text-primary !important;
+    }
+
+    &:hover, &:focus {
+      background-color: $r-body-bg !important;
+      color: $r-text-primary !important;
+    }
+
+    // Override theme_css: .dropdown-item.active
+    &.active, &:active {
+      background-color: $r-primary-light !important;
+      color: $r-primary !important;
+    }
+  }
+
+  .dropdown-divider {
+    border-color: $r-border-color !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Modals
+// ---------------------------------------------------------------------------
+.modal-content {
+  border: none !important;
+  border-radius: $r-border-radius-lg !important;
+  box-shadow: $r-shadow-xl !important;
+  overflow: hidden !important;
+}
+
+.modal-header {
+  padding: $r-space-6 !important;
+  border-bottom: 1px solid $r-border-color !important;
+  background-color: $r-card-bg !important;
+
+  .modal-title {
+    font-size: $r-text-lg !important;
+    font-weight: 600 !important;
+  }
+
+  .close {
+    font-size: $r-text-xl !important;
+    opacity: 0.5 !important;
+    padding: $r-space-4 !important;
+
+    &:hover {
+      opacity: 0.8 !important;
+    }
+  }
+}
+
+.modal-body {
+  padding: $r-space-6 !important;
+  border-bottom: none !important;
+}
+
+.modal-footer {
+  padding: $r-space-4 $r-space-6 !important;
+  border-top: 1px solid $r-border-color !important;
+  background-color: $r-body-bg !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.4 !important;
+}
+
+// ---------------------------------------------------------------------------
+// Alerts
+// ---------------------------------------------------------------------------
+.alert {
+  border-radius: $r-border-radius-sm !important;
+  border: none !important;
+  padding: $r-space-4 $r-space-5 !important;
+  font-size: $r-text-sm !important;
+}
+
+.alert-primary {
+  background-color: $r-primary-light !important;
+  color: $r-primary-dark !important;
+}
+
+.alert-success {
+  background-color: $r-success-light !important;
+  color: darken($r-success, 15%) !important;
+}
+
+.alert-danger {
+  background-color: $r-danger-light !important;
+  color: darken($r-danger, 15%) !important;
+}
+
+.alert-warning {
+  background-color: $r-warning-light !important;
+  color: darken($r-warning, 25%) !important;
+}
+
+.alert-info {
+  background-color: $r-info-light !important;
+  color: darken($r-info, 15%) !important;
+}
+
+.alert-secondary {
+  background-color: $r-body-bg !important;
+  color: $r-text-secondary !important;
+  border: 1px solid $r-border-color !important;
+}
+
+// ---------------------------------------------------------------------------
+// Badges — override theme_css: .menu-item-count background
+// ---------------------------------------------------------------------------
+.badge {
+  font-weight: 500 !important;
+  font-size: $r-text-xs !important;
+  padding: 4px 10px !important;
+  border-radius: $r-border-radius-pill !important;
+  letter-spacing: 0.02em !important;
+}
+
+.badge-primary {
+  background-color: $r-primary !important;
+  color: #fff !important;
+}
+
+.badge-success {
+  background-color: $r-success-light !important;
+  color: $r-success !important;
+}
+
+.badge-danger {
+  background-color: $r-danger-light !important;
+  color: $r-danger !important;
+}
+
+.badge-warning {
+  background-color: $r-warning-light !important;
+  color: darken($r-warning, 10%) !important;
+}
+
+.badge-info {
+  background-color: $r-info-light !important;
+  color: $r-info !important;
+}
+
+.badge-secondary, .badge-light {
+  background-color: $r-body-bg !important;
+  color: $r-text-secondary !important;
+}
+
+// ---------------------------------------------------------------------------
+// Pagination — override theme_css: .pagination .page-item.active
+// ---------------------------------------------------------------------------
+.pagination {
+  .page-item {
+    .page-link {
+      border: 1px solid $r-border-color !important;
+      color: $r-text-secondary !important;
+      font-size: $r-text-sm !important;
+      padding: 6px 12px !important;
+      margin: 0 2px !important;
+      border-radius: $r-border-radius-sm !important;
+      transition: all $r-transition-fast !important;
+      background-color: $r-card-bg !important;
+
+      &:hover {
+        background-color: $r-body-bg !important;
+        border-color: $r-text-muted !important;
+        color: $r-text-primary !important;
+      }
+    }
+
+    &.active .page-link {
+      background-color: $r-primary !important;
+      border-color: $r-primary !important;
+      color: #fff !important;
+    }
+
+    &.disabled .page-link {
+      background-color: $r-body-bg !important;
+      border-color: $r-border-color !important;
+      color: $r-text-muted !important;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Nav Tabs — override theme_css: .tabs .nav .nav-link.active border
+// ---------------------------------------------------------------------------
+.nav-tabs {
+  border-bottom: 1px solid $r-border-color !important;
+
+  .nav-link {
+    color: $r-text-secondary !important;
+    font-size: $r-text-sm !important;
+    font-weight: 500 !important;
+    padding: 10px 16px !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all $r-transition !important;
+    border-radius: 0 !important;
+
+    &:hover {
+      color: $r-text-primary !important;
+      border-bottom-color: $r-text-muted !important;
+      background-color: transparent !important;
+    }
+
+    &.active {
+      color: $r-primary !important;
+      border-bottom: 2px solid $r-primary !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Anagami ERP custom tabs
+.tabs .nav .nav-link.active,
+.tabs .nav .nav-item:hover {
+  border-bottom: 3px solid $r-primary !important;
+  color: $r-primary !important;
+}
+
+.tabs .nav .nav-item,
+.tabs .nav .nav-link {
+  font-size: $r-text-sm !important;
+  color: $r-text-secondary !important;
+}
+
+// ---------------------------------------------------------------------------
+// Progress bars
+// ---------------------------------------------------------------------------
+.progress {
+  border-radius: $r-border-radius-pill !important;
+  background-color: $r-body-bg !important;
+  height: 6px !important;
+}
+
+.progress-bar {
+  border-radius: $r-border-radius-pill !important;
+  background-color: $r-primary !important;
+}
+
+// ---------------------------------------------------------------------------
+// Text color utility overrides (within content area)
+// ---------------------------------------------------------------------------
+// Override text-primary to use our primary color
+.text-primary {
+  color: $r-primary !important;
+}
+
+// Override bg-primary
+.bg-primary {
+  background-color: $r-primary !important;
+}
+
+// Override border utilities
+.border-grey {
+  border-color: $r-border-color !important;
+}
+
+.border-bottom-grey {
+  border-bottom-color: $r-border-color !important;
+}
+
+.border-top-grey {
+  border-top-color: $r-border-color !important;
+}
+
+.border-left-grey {
+  border-left-color: $r-border-color !important;
+}
+
+.border-right-grey {
+  border-right-color: $r-border-color !important;
+}
+
+// ---------------------------------------------------------------------------
+// Scrollbar styling
+// ---------------------------------------------------------------------------
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($r-text-muted, 0.3) !important;
+  border-radius: 3px !important;
+
+  &:hover {
+    background-color: rgba($r-text-muted, 0.5) !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// SweetAlert2
+// ---------------------------------------------------------------------------
+.swal2-popup {
+  border-radius: $r-border-radius-lg !important;
+}
+
+.swal2-confirm {
+  border-radius: $r-border-radius-sm !important;
+  background-color: $r-primary !important;
+}
+
+.swal2-cancel {
+  border-radius: $r-border-radius-sm !important;
+}
+
+// ---------------------------------------------------------------------------
+// Tooltip
+// ---------------------------------------------------------------------------
+.tooltip-inner {
+  border-radius: $r-border-radius-xs !important;
+  font-size: $r-text-xs !important;
+  padding: 4px 8px !important;
+}
+
+// ---------------------------------------------------------------------------
+// Datepicker — override theme_css: .qs-current background
+// ---------------------------------------------------------------------------
+.qs-current {
+  background-color: $r-primary !important;
+  border-radius: $r-border-radius-sm !important;
+
+  &:hover {
+    background-color: $r-primary-hover !important;
+  }
+}
+
+.datepicker table tr td.active.active {
+  background: $r-primary !important;
+  border-color: $r-primary !important;
+  text-shadow: none !important;
+}

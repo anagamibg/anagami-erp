@@ -1,0 +1,75 @@
+// ============================================================================
+// Anagami ERP Redesign — Login / Register Pages
+// ============================================================================
+
+.login_section {
+  background-color: $r-body-bg !important;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_box {
+  background-color: $r-card-bg;
+  border-radius: $r-border-radius-lg;
+  box-shadow: $r-shadow-lg;
+  border: 1px solid $r-border-color;
+  padding: $r-space-10;
+  max-width: 440px;
+  width: 100%;
+
+  h3 {
+    font-size: $r-text-2xl;
+    font-weight: 700;
+    color: $r-text-primary;
+    margin-bottom: $r-space-2;
+  }
+
+  .form-group {
+    label {
+      font-size: $r-text-sm;
+      font-weight: 500;
+      color: $r-text-secondary;
+    }
+
+    .form-control {
+      padding: 10px 14px !important;
+      font-size: $r-text-sm;
+    }
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: $r-text-md;
+    font-weight: 600;
+    margin-top: $r-space-3;
+  }
+
+  a {
+    color: $r-primary;
+    font-size: $r-text-sm;
+
+    &:hover {
+      color: $r-primary-dark;
+    }
+  }
+}
+
+.login_header {
+  h3 {
+    color: $r-text-primary;
+    font-size: $r-text-xl;
+    font-weight: 600;
+  }
+
+  box-shadow: none !important;
+  border-bottom: 1px solid $r-border-color;
+}
+
+.forgot_pswd a {
+  color: $r-primary;
+  font-size: $r-text-sm;
+  font-weight: 500;
+}

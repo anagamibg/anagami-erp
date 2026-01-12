@@ -1,0 +1,33 @@
+// ============================================================================
+// Anagami ERP Redesign — Badges & Tags (additional to Bootstrap overrides)
+// ============================================================================
+
+// Status badges with dot indicators
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: $r-border-radius-pill;
+  font-size: $r-text-xs;
+  font-weight: 500;
+
+  &::before {
+    content: '';
+    @include status-dot($r-text-muted, 6px);
+  }
+
+  &.badge-success::before { background-color: $r-success; }
+  &.badge-warning::before { background-color: $r-warning; }
+  &.badge-danger::before  { background-color: $r-danger; }
+  &.badge-info::before    { background-color: $r-info; }
+  &.badge-primary::before { background-color: $r-primary; }
+}
+
+// Labels
+.label {
+  border-radius: $r-border-radius-pill;
+  padding: 3px 10px;
+  font-size: $r-text-xs;
+  font-weight: 500;
+}

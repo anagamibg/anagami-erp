@@ -1,0 +1,78 @@
+// ============================================================================
+// Anagami ERP Redesign — Mixins
+// ============================================================================
+
+// Truncate text with ellipsis
+@mixin truncate($width: 100%) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $width;
+}
+
+// Card style shorthand
+@mixin card-style($radius: $r-border-radius, $shadow: $r-shadow-sm) {
+  background-color: $r-card-bg;
+  border: 1px solid $r-border-color;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+// Flex center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex between
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Status dot indicator
+@mixin status-dot($color, $size: 8px) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+// Hover lift effect
+@mixin hover-lift {
+  transition: transform $r-transition, box-shadow $r-transition;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $r-shadow-md;
+  }
+}
+
+// Focus ring
+@mixin focus-ring($color: $r-primary) {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color, 0.15);
+  }
+}
+
+// Smooth scrollbar (for custom scroll areas)
+@mixin smooth-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba($r-text-muted, 0.3) transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($r-text-muted, 0.3);
+    border-radius: 2px;
+  }
+}

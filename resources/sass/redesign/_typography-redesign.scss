@@ -1,0 +1,99 @@
+// ============================================================================
+// Anagami ERP Redesign — Typography
+// ============================================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap');
+
+// ---------------------------------------------------------------------------
+// Font Family
+// ---------------------------------------------------------------------------
+$r-font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+// ---------------------------------------------------------------------------
+// Font Size Scale
+// ---------------------------------------------------------------------------
+$r-text-xs:   11px;
+$r-text-sm:   12px;
+$r-text-base: 13px;
+$r-text-md:   14px;
+$r-text-lg:   16px;
+$r-text-xl:   18px;
+$r-text-2xl:  20px;
+$r-text-3xl:  24px;
+$r-text-4xl:  30px;
+$r-text-5xl:  36px;
+
+// ---------------------------------------------------------------------------
+// Line Heights
+// ---------------------------------------------------------------------------
+$r-leading-tight:  1.25;
+$r-leading-snug:   1.375;
+$r-leading-normal: 1.5;
+$r-leading-relaxed: 1.625;
+
+// ---------------------------------------------------------------------------
+// Apply Font Globally
+// ---------------------------------------------------------------------------
+body {
+  font-family: $r-font-family !important;
+  font-size: $r-text-base;
+  line-height: $r-leading-normal;
+  color: $r-text-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $r-font-family !important;
+  font-weight: 600;
+  color: $r-text-primary;
+  line-height: $r-leading-tight;
+}
+
+h1, .h1 { font-size: $r-text-4xl; }
+h2, .h2 { font-size: $r-text-3xl; }
+h3, .h3 { font-size: $r-text-2xl; }
+h4, .h4 { font-size: $r-text-xl; }
+h5, .h5 { font-size: $r-text-lg; }
+h6, .h6 { font-size: $r-text-md; }
+
+p {
+  font-family: $r-font-family !important;
+  line-height: $r-leading-normal;
+}
+
+a {
+  transition: color $r-transition;
+}
+
+small, .small {
+  font-size: $r-text-sm;
+}
+
+.text-muted {
+  color: $r-text-muted !important;
+}
+
+// Label styling
+label, .form-group label {
+  font-family: $r-font-family !important;
+  font-size: $r-text-sm;
+  font-weight: 500;
+  color: $r-text-secondary;
+}
+
+// Input font
+input, textarea, select, button, .form-control, .btn {
+  font-family: $r-font-family !important;
+}
+
+// DataTables font
+.dataTables_wrapper {
+  font-family: $r-font-family !important;
+}
+
+// Sidebar font
+.main-sidebar, .sidebar-menu, .sidebar-brand-box {
+  font-family: $r-font-family !important;
+}

@@ -1,0 +1,28 @@
+// ============================================================================
+// Anagami ERP Redesign — Alerts & Notifications (additional to Bootstrap overrides)
+// ============================================================================
+
+// Toast-style notifications
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: $r-space-3;
+
+  .close {
+    opacity: 0.5;
+    font-size: $r-text-md;
+    padding: 0;
+    margin-left: auto;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Alert with icon
+.alert-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}

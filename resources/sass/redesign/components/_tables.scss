@@ -1,0 +1,91 @@
+// ============================================================================
+// Anagami ERP Redesign — Tables & DataTables (Aggressive Override)
+// ============================================================================
+
+// DataTables wrapper
+.dataTables_wrapper {
+  .dataTables_length {
+    padding: $r-space-4 $r-space-6 !important;
+    font-size: $r-text-sm !important;
+    color: $r-text-secondary !important;
+
+    select {
+      border: 1px solid $r-border-color !important;
+      border-radius: $r-border-radius-sm !important;
+      padding: 4px 8px !important;
+      font-size: $r-text-sm !important;
+    }
+  }
+
+  .dataTables_info {
+    padding: $r-space-4 $r-space-6 !important;
+    font-size: $r-text-sm !important;
+    color: $r-text-muted !important;
+  }
+
+  .dataTables_paginate {
+    padding: $r-space-3 $r-space-6 !important;
+  }
+
+  // Override table heading styles
+  .table thead td, .table thead th {
+    text-wrap: nowrap !important;
+    border-bottom-width: 2px !important;
+  }
+}
+
+// DataTables pagination
+.dataTables_paginate {
+  .paginate_button {
+    border: 1px solid $r-border-color !important;
+    border-radius: $r-border-radius-sm !important;
+    color: $r-text-secondary !important;
+    background: $r-card-bg !important;
+    font-size: $r-text-sm !important;
+    padding: 4px 10px !important;
+    margin: 0 2px !important;
+
+    &:hover {
+      background-color: $r-body-bg !important;
+      border-color: $r-text-muted !important;
+      color: $r-text-primary !important;
+    }
+
+    &.current {
+      background-color: $r-primary !important;
+      border-color: $r-primary !important;
+      color: #fff !important;
+    }
+  }
+}
+
+// Task view action buttons
+.task_view {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+
+  .taskView {
+    color: $r-text-secondary !important;
+    border-right-color: $r-border-color !important;
+    padding: 4px 10px !important;
+    font-size: $r-text-sm !important;
+
+    &:hover {
+      background-color: $r-body-bg !important;
+    }
+  }
+
+  .task_view_more {
+    color: $r-text-secondary !important;
+
+    &:hover {
+      background-color: $r-body-bg !important;
+    }
+  }
+
+  .dropdown-menu {
+    box-shadow: $r-shadow-lg !important;
+    border: 1px solid $r-border-color !important;
+    border-radius: $r-border-radius !important;
+  }
+}

@@ -1,0 +1,82 @@
+// ============================================================================
+// Anagami ERP Redesign — Forms (Aggressive Override)
+// ============================================================================
+
+// Form group
+.form-group {
+  margin-bottom: $r-space-5 !important;
+}
+
+// Dropify
+.dropify-wrapper {
+  border: 2px dashed $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  background-color: $r-body-bg !important;
+
+  &:hover {
+    border-color: $r-primary !important;
+  }
+}
+
+// Quill editor
+.ql-toolbar.ql-snow {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm $r-border-radius-sm 0 0 !important;
+  background-color: $r-body-bg !important;
+}
+
+.ql-container.ql-snow {
+  border: 1px solid $r-border-color !important;
+  border-top: none !important;
+  border-radius: 0 0 $r-border-radius-sm $r-border-radius-sm !important;
+}
+
+// Tagify
+.tagify {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+
+  .tagify__tag {
+    border-radius: $r-border-radius-pill !important;
+  }
+}
+
+// Date range picker
+.daterangepicker {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-lg !important;
+
+  td.active, td.active:hover {
+    background-color: $r-primary !important;
+  }
+
+  .ranges li.active {
+    background-color: $r-primary !important;
+  }
+
+  .drp-buttons {
+    border-top-color: $r-border-color !important;
+
+    .btn {
+      border-radius: $r-border-radius-sm !important;
+    }
+  }
+}
+
+// Datepicker container
+.qs-datepicker-container {
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-lg !important;
+  border: 1px solid $r-border-color !important;
+}
+
+.qs-controls {
+  background-color: $r-body-bg !important;
+  border-radius: $r-border-radius $r-border-radius 0 0 !important;
+}
+
+.qs-active, .qs-range-end, .qs-range-start {
+  background-color: $r-primary-dark !important;
+  border-radius: $r-border-radius-sm !important;
+}

@@ -1,0 +1,74 @@
+// ============================================================================
+// Anagami ERP Redesign — Buttons (additional to Bootstrap overrides)
+// ============================================================================
+
+// Action buttons (table row actions)
+.task_view {
+  border: 1px solid $r-border-color;
+  border-radius: $r-border-radius-sm;
+
+  .taskView {
+    color: $r-text-secondary;
+    border-right-color: $r-border-color;
+    padding: 4px 10px;
+    font-size: $r-text-sm;
+    transition: all $r-transition-fast;
+
+    &:hover {
+      background-color: $r-body-bg;
+      color: $r-text-primary;
+    }
+  }
+
+  .task_view_more {
+    color: $r-text-secondary;
+    padding: 4px 6px;
+
+    &:hover {
+      background-color: $r-body-bg;
+    }
+  }
+
+  .dropdown-menu {
+    box-shadow: $r-shadow-lg;
+    border: 1px solid $r-border-color;
+    border-radius: $r-border-radius;
+  }
+}
+
+// Button group styling
+.btn-group .btn {
+  border-radius: 0;
+
+  &:first-child {
+    border-top-left-radius: $r-border-radius-sm !important;
+    border-bottom-left-radius: $r-border-radius-sm !important;
+  }
+
+  &:last-child {
+    border-top-right-radius: $r-border-radius-sm !important;
+    border-bottom-right-radius: $r-border-radius-sm !important;
+  }
+}
+
+// Active toggle button
+.btn-active {
+  background-color: $r-primary !important;
+  border-color: $r-primary !important;
+  color: #fff !important;
+
+  &.btn-secondary {
+    background-color: $r-primary !important;
+    border-color: $r-primary !important;
+    color: #fff !important;
+  }
+}
+
+// Icon-only buttons
+.btn-icon {
+  @include flex-center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: $r-border-radius-sm !important;
+}

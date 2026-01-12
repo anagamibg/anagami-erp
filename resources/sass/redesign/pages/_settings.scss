@@ -1,0 +1,118 @@
+// ============================================================================
+// Anagami ERP Redesign — Settings Pages (Aggressive Override)
+// ============================================================================
+
+.settings-box {
+  background-color: $r-card-bg !important;
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  box-shadow: $r-shadow-sm !important;
+  overflow: hidden !important;
+
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  // Settings box header
+  .s-b-n-header {
+    .f-21 {
+      font-size: $r-text-xl !important;
+      font-weight: 600 !important;
+    }
+
+    .nav-item.f-15 {
+      font-size: 13px !important;
+    }
+  }
+}
+
+// Settings sidebar/menu — Fynora-style clean navigation
+.settings-sidebar {
+  background-color: $r-card-bg !important;
+  border-right: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius 0 0 $r-border-radius !important;
+  padding: $r-space-2 0 !important;
+
+  li {
+    border-bottom: none !important;
+    font-size: $r-text-sm !important;
+    transition: all $r-transition-fast !important;
+    margin: 1px $r-space-2 !important;
+    border-radius: $r-border-radius-sm !important;
+
+    &.active {
+      background-color: $r-primary-light !important;
+
+      a {
+        color: $r-primary !important;
+        font-weight: 600 !important;
+      }
+    }
+
+    &:hover {
+      background-color: $r-body-bg !important;
+    }
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+
+    a {
+      font-size: 13px !important;
+      padding: 9px 16px !important;
+      color: $r-text-secondary !important;
+      display: block !important;
+      border-radius: $r-border-radius-sm !important;
+    }
+  }
+}
+
+// Settings search box
+.settings-sidebar .search-box,
+.settings-sidebar input[type="search"],
+.settings-sidebar input[type="text"] {
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius-sm !important;
+  padding: 8px 12px !important;
+  font-size: $r-text-sm !important;
+  margin: $r-space-2 $r-space-3 $r-space-2 !important;
+  width: calc(100% - #{$r-space-6}) !important;
+}
+
+// Settings menu (scrollable)
+.settings-menu {
+  @include smooth-scroll;
+
+  li a {
+    font-size: 13px !important;
+    padding: 9px 16px !important;
+  }
+}
+
+// Save/action buttons row
+.set-btns {
+  background-color: $r-body-bg !important;
+  border-top: 1px solid $r-border-color !important;
+  border-radius: 0 0 $r-border-radius $r-border-radius !important;
+  padding: $r-space-4 $r-space-6 !important;
+}
+
+// Permission table
+.permisison-table {
+  .bg-light {
+    background-color: $r-body-bg !important;
+  }
+}
+
+// List group in settings
+.list-group-item {
+  border-color: $r-border-color !important;
+  font-size: $r-text-sm !important;
+  padding: $r-space-3 $r-space-5 !important;
+
+  &:hover {
+    background-color: $r-body-bg !important;
+  }
+}

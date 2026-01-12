@@ -1,0 +1,35 @@
+// ============================================================================
+// Anagami ERP Redesign — Tabs & Navigation (Aggressive Override)
+// ============================================================================
+
+// Custom tabs component (Anagami ERP tabs)
+.tabs {
+  .nav .nav-item {
+    color: $r-text-secondary !important;
+    font-size: $r-text-sm !important;
+    font-weight: 500 !important;
+    transition: all $r-transition !important;
+  }
+
+  .-secondary {
+    border-bottom: 1px solid $r-border-color !important;
+
+    li a {
+      color: $r-text-secondary !important;
+      font-size: $r-text-sm !important;
+      padding: 8px 16px !important;
+      border-bottom: 2px solid transparent !important;
+
+      &.active, &:hover {
+        color: $r-primary !important;
+        border-bottom-color: $r-primary !important;
+      }
+    }
+  }
+}
+
+// Settings sidebar as tabs
+.settings-sidebar {
+  background-color: $r-card-bg !important;
+  border-radius: $r-border-radius !important;
+}

@@ -1,0 +1,37 @@
+// ============================================================================
+// Anagami ERP Redesign — Pagination (additional to Bootstrap overrides)
+// ============================================================================
+
+// DataTables pagination wrapper
+.dataTables_paginate {
+  display: flex;
+  justify-content: flex-end;
+
+  .paginate_button {
+    border: 1px solid $r-border-color !important;
+    border-radius: $r-border-radius-sm !important;
+    color: $r-text-secondary !important;
+    background: $r-card-bg !important;
+    font-size: $r-text-sm;
+    padding: 4px 10px !important;
+    margin: 0 2px;
+    transition: all $r-transition-fast;
+
+    &:hover {
+      background-color: $r-body-bg !important;
+      border-color: $r-text-muted !important;
+      color: $r-text-primary !important;
+    }
+
+    &.current {
+      background-color: $r-primary !important;
+      border-color: $r-primary !important;
+      color: #fff !important;
+    }
+
+    &.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}

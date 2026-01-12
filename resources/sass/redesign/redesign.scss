@@ -1,0 +1,46 @@
+// ============================================================================
+// Anagami ERP Redesign — Main Entry Point
+// ============================================================================
+// This file imports all redesign partials in the correct order.
+// It is loaded AFTER Bootstrap and all original Anagami ERP styles,
+// acting as an override layer that doesn't modify original files.
+// ============================================================================
+
+// 1. Variables & Design Tokens
+@import "variables-redesign";
+
+// 2. Mixins
+@import "mixins-redesign";
+
+// 3. Typography (Onest font)
+@import "typography-redesign";
+
+// 4. Bootstrap Overrides (buttons, forms, tables, modals, etc.)
+@import "bootstrap-overrides";
+
+// 5. Layout Components
+@import "components/sidebar";
+@import "components/header";
+@import "components/content";
+
+// 6. UI Components
+@import "components/cards";
+@import "components/buttons";
+@import "components/tables";
+@import "components/forms";
+@import "components/modals";
+@import "components/alerts";
+@import "components/badges";
+@import "components/dropdowns";
+@import "components/pagination";
+@import "components/tabs";
+
+// 7. Page-Specific Styles
+@import "pages/dashboard";
+@import "pages/login";
+@import "pages/invoices";
+@import "pages/projects";
+@import "pages/settings";
+
+// 8. Dark Theme (must be last to override everything)
+@import "dark-theme-redesign";

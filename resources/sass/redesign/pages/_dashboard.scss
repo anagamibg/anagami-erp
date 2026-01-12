@@ -1,0 +1,103 @@
+// ============================================================================
+// Anagami ERP Redesign — Dashboard Page (Aggressive Override)
+// ============================================================================
+
+.admin-dashboard,
+.employee-dashboard,
+.client-dashboard {
+  background-color: $r-body-bg !important;
+
+  // Dashboard widget boxes
+  .bg-white.b-shadow-4 {
+    border: 1px solid $r-border-color !important;
+    box-shadow: $r-shadow-sm !important;
+    border-radius: $r-border-radius !important;
+  }
+}
+
+// Dashboard KPI headings
+.e-d-tasks-projects-events,
+.admin-dashboard {
+  h5.f-15 {
+    font-size: 13px !important;
+    color: $r-text-secondary !important;
+  }
+
+  .bg-white.b-shadow-4 {
+    border: 1px solid $r-border-color !important;
+    box-shadow: $r-shadow-sm !important;
+    border-radius: $r-border-radius !important;
+  }
+}
+
+// Notifications panel in sidebar
+.s-b-inner.s-b-notifications.bg-white.b-shadow-4 {
+  box-shadow: $r-shadow-sm !important;
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+}
+
+// Recent activity
+.recent-activity {
+  .res-activity-list {
+    &:after {
+      border-color: $r-border-color !important;
+    }
+  }
+}
+
+// Chart containers
+.chart-container {
+  .axis, .chart-label {
+    font-size: $r-text-xs !important;
+    fill: $r-text-muted !important;
+  }
+}
+
+.dash-border-top {
+  border-top: 1px dashed $r-border-color !important;
+}
+
+// FullCalendar
+.fc {
+  .fc-button-primary {
+    background-color: $r-card-bg !important;
+    border-color: $r-border-color !important;
+    color: $r-text-secondary !important;
+    border-radius: $r-border-radius-sm !important;
+    font-size: $r-text-sm !important;
+
+    &.fc-button-active {
+      background-color: $r-primary !important;
+      border-color: $r-primary !important;
+      color: #fff !important;
+    }
+  }
+
+  .fc-col-header-cell-cushion {
+    color: $r-text-secondary !important;
+    font-size: $r-text-xs !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+  }
+
+  .fc-day-today {
+    background-color: $r-primary-light !important;
+  }
+
+  .fc-event {
+    border-radius: $r-border-radius-xs !important;
+  }
+
+  .fc-theme-standard td,
+  .fc-theme-standard th,
+  .fc-theme-standard .fc-scrollgrid {
+    border-color: $r-border-color !important;
+  }
+}
+
+// Clock in button
+.btn.btn-primary {
+  background-color: $r-primary !important;
+  border-color: $r-primary !important;
+}

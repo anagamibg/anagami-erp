@@ -1,0 +1,482 @@
+// ============================================================================
+// Anagami ERP Redesign — Dark Theme (Aggressive Override)
+// ============================================================================
+// Must override BOTH original dark-theme.scss AND our redesign light styles.
+// Scoped under body.dark-theme
+
+body.dark-theme {
+  color: $r-dark-text !important;
+  background-color: $r-dark-bg !important;
+
+  // ---------------------------------------------------------------------------
+  // Backgrounds
+  // ---------------------------------------------------------------------------
+  .card, .bg-white, .content-wrapper, .admin-dashboard, .page-title,
+  .main-container, .main-container.bg-additional-grey, .settings-box,
+  .bootstrap-select > .dropdown-toggle, .btn-cancel, .dropzone,
+  .tabs .-secondary, .set-btns, .list-group-item, .bg-light,
+  .bg-grey, .bg-light-grey, .bg-additional-grey, .bg-white-shade,
+  .c-inv-desc select, .form-control, .w-task-board-panel,
+  .b-p-header .b-p-badge, textarea, .select-picker.role-permission-select,
+  .fc .fc-button-primary, .dropzone .dz-preview.dz-image-preview,
+  .body-wrapper, .filter-box {
+    background-color: $r-dark-bg !important;
+  }
+
+  .bg-dark, .dropdown-item:hover, .dropdown-item:focus, .bg-amt-grey,
+  .e-d-tasks-projects-events .bg-grey, .cal-info .bg-light-grey,
+  .inv-num-date .bg-light-grey, .inv-detail .bg-light-grey,
+  .message_wrapper .msg-content-left .tablinks.active,
+  .message_wrapper .msg-content-left .card:hover,
+  .project-right .p-activity-heading span, .settings-sidebar li.active,
+  .board-panel, .w-task-board-panel .minimized,
+  .task-search .input-group-text, .ticket-msg .card-horizontal.bg-white-shade,
+  .bg-white-shade.ticket-contact-owner, .dark_place .input-group-text,
+  .login_section, .table .thead-light th, .table thead th,
+  .tagify__tag>div, .tagify__tag__removeBtn,
+  .fc-button.fc-button-primary.fc-button-active,
+  .fc-day-today, .in-range.available, .dropify-wrapper .dropify-preview,
+  .dropify-wrapper, .input-group-text, .progress,
+  .swal2-popup, .main-sidebar, .create-inv .bg-light-gre,
+  .fc .fc-cell-shaded, .qs-controls, .daterangepicker td.off.in-range,
+  .notification-dropdown.bg-additional-grey {
+    background-color: $r-dark-card !important;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Text
+  // ---------------------------------------------------------------------------
+  .text-dark, .text-dark-grey, .text-darkest-grey, .table tr td,
+  .qs-datepicker-container, .qs-day, .table tr td a,
+  .tabs .nav .nav-item, .login_box h3, .login_header h3, .form-control,
+  .forgot_pswd a, .login_box .form-group label, .dropdown-item,
+  .filter-option-inner-inner, .ql-snow .ql-picker,
+  .form_custom_label, .select-picker.role-permission-select,
+  .tagify__tag>div>*, .daterangepicker td.in-range, .text-muted,
+  .input-group-text, .fc .fc-col-header-cell-cushion, .swal2-title,
+  .swal2-content, .login_box a, .bg-grey, .bg-grey span,
+  .desktop-description, .item_name, .quantity, .cost_per_item,
+  .page-heading h2, .card-title, .modal-title {
+    color: $r-dark-text !important;
+  }
+
+  a:hover {
+    color: lighten($r-primary, 15%) !important;
+  }
+
+  .chart-container .axis, .chart-container .chart-label, .data-point-value {
+    fill: $r-dark-text-muted !important;
+  }
+
+  .ql-snow .ql-stroke {
+    stroke: $r-dark-text !important;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Borders
+  // ---------------------------------------------------------------------------
+  .b-shadow-4, .form-control, .w-tables, .c-inv-desc table tr td,
+  .border, .table-bordered, .c-inv-total .c-inv-total-right td,
+  .card, .card.border-0, .card.b-shadow-4, .card.b-shadow-4.border-0,
+  .filter-box {
+    box-shadow: none !important;
+    border: 1px solid $r-dark-border !important;
+  }
+
+  .border-grey, .border-bottom-grey, .border-top-grey,
+  .border-left-grey, .border-right-grey {
+    border-color: $r-dark-border !important;
+  }
+
+  .main-header, .modal-header, .nav-tabs,
+  .border-bottom, .message_wrapper .msg-header {
+    border-bottom: 1px solid $r-dark-border !important;
+  }
+
+  .modal-footer, .border-top,
+  .more-filters .more-filter-tab.in .clear-all,
+  .daterangepicker .drp-buttons {
+    border-top: 1px solid $r-dark-border !important;
+  }
+
+  .border-right, .task_view .taskView {
+    border-right: 1px solid $r-dark-border !important;
+  }
+
+  .border-left, .c-inv-btns .dropdown-toggle span {
+    border-left: 1px solid $r-dark-border !important;
+  }
+
+  .table thead th {
+    box-shadow: none !important;
+    border-bottom: 2px solid $r-dark-border !important;
+    color: $r-dark-text-muted !important;
+    background-color: $r-dark-card !important;
+  }
+
+  .table td {
+    border-bottom: 1px solid $r-dark-border !important;
+    box-shadow: none !important;
+  }
+
+  .filter-box, .login_header {
+    box-shadow: none !important;
+  }
+
+  .sidebar-brand-box .sidebar-brand-dropdown, .dropdown-menu,
+  .add-client, .modal-content, .more-filters .more-filter-tab,
+  .daterangepicker {
+    background-color: $r-dark-bg !important;
+    border: 1px solid $r-dark-border !important;
+  }
+
+  .c-inv-disc td, .inv-num-date tr td, .inv-detail tr td,
+  .message_wrapper .msg-content-left, .message_wrapper,
+  .message_wrapper .msg-content-left .card, .message_wrapper .input-group,
+  .settings-sidebar, .ticket-wrapper, .task-detail-panel,
+  .task_view, .fc-theme-standard .fc-scrollgrid,
+  .fc-theme-standard td, .fc-theme-standard th,
+  .fc .fc-button-primary, .dropify-wrapper, .input-group-text,
+  .fc-theme-standard .fc-list, .tagify, .list-group-item {
+    border: 1px solid $r-dark-border !important;
+  }
+
+  .dash-border-top {
+    border-top: 1px dashed $r-dark-border !important;
+  }
+
+  .ql-toolbar.ql-snow, .ql-container.ql-snow {
+    border-color: $r-dark-border !important;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Components
+  // ---------------------------------------------------------------------------
+
+  // Modal
+  .modal.show {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .modal-content {
+    background-color: $r-dark-bg !important;
+  }
+
+  .modal-footer {
+    background-color: $r-dark-card !important;
+  }
+
+  .close {
+    color: $r-dark-text !important;
+  }
+
+  // Buttons
+  .btn-primary,
+  .btn-primary.disabled:hover,
+  .btn-primary:disabled:hover {
+    background-color: $r-primary !important;
+    border-color: $r-primary !important;
+    color: #fff !important;
+  }
+
+  .btn-primary:hover {
+    background-color: $r-primary-hover !important;
+    border-color: $r-primary-hover !important;
+  }
+
+  .btn-secondary {
+    border-color: $r-dark-border !important;
+    background-color: $r-dark-card !important;
+    color: $r-dark-text-muted !important;
+
+    &:hover {
+      background-color: $r-dark-bg !important;
+      color: $r-dark-text !important;
+    }
+  }
+
+  // Pagination
+  .page-item .page-link,
+  .page-item.disabled .page-link,
+  .pagination li a {
+    background-color: $r-dark-card !important;
+    border-color: $r-dark-border !important;
+    color: $r-dark-text-muted !important;
+  }
+
+  .pagination .page-item.active .page-link,
+  .page-item.active .page-link {
+    background-color: $r-primary !important;
+    border-color: $r-primary !important;
+    color: #fff !important;
+  }
+
+  // Dropdowns
+  .dropdown-item {
+    color: $r-dark-text !important;
+
+    &.active, &:active:hover {
+      background-color: $r-primary !important;
+      color: #fff !important;
+    }
+  }
+
+  // Badges
+  .badge-light {
+    background-color: $r-dark-card !important;
+    color: $r-dark-text-muted !important;
+  }
+
+  // Sidebar — dark mode reverts to dark sidebar
+  .main-sidebar,
+  aside, aside[class*="sidebar-"] {
+    background-color: $r-dark-sidebar-bg !important;
+    border-right-color: rgba(255,255,255,0.05) !important;
+  }
+
+  .sidebar-brand-box, .sidebar-brand-box.bg-dark,
+  .sidebar-menu, .sidebar-menu.bg-dark {
+    background-color: $r-dark-sidebar-bg !important;
+  }
+
+  .sidebar-brand-box .sidebar-brand {
+    border-bottom-color: rgba(255,255,255,0.05) !important;
+  }
+
+  .sidebar-brand-box .sidebar-brand .sidebar-brand-name h1,
+  .sidebar-brand-box .text-white-shade,
+  .main-sidebar .text-white-shade {
+    color: #fff !important;
+  }
+
+  .sidebar-brand-box .sidebar-brand .sidebar-brand-name .pro-name p {
+    color: $r-dark-text-muted !important;
+  }
+
+  .sidebar-menu li .nav-item,
+  .sidebar-menu li .nav-item.text-lightest,
+  .sidebar-menu li .nav-item.sidebar-text-color {
+    color: $r-dark-text-muted !important;
+
+    svg {
+      color: $r-dark-text-muted !important;
+      fill: $r-dark-text-muted !important;
+    }
+
+    &:hover {
+      color: #fff !important;
+      background-color: rgba(255,255,255,0.05) !important;
+    }
+
+    &.active {
+      color: #fff !important;
+      background-color: $r-primary !important;
+    }
+  }
+
+  .sidebar-menu li .accordionItemContent a {
+    color: $r-dark-text-muted !important;
+
+    &:hover {
+      color: #fff !important;
+      background-color: rgba(255,255,255,0.05) !important;
+    }
+
+    &.active {
+      color: lighten($r-primary, 20%) !important;
+      background-color: rgba($r-primary, 0.15) !important;
+    }
+  }
+
+  .accordionItem.openIt > .accordionItemHeading .nav-item {
+    color: lighten($r-primary, 20%) !important;
+    background-color: rgba($r-primary, 0.15) !important;
+
+    svg {
+      color: lighten($r-primary, 20%) !important;
+      fill: lighten($r-primary, 20%) !important;
+    }
+  }
+
+  .sidebarTogglerBox, .sidebarTogglerBox.bg-dark {
+    background-color: $r-dark-sidebar-bg !important;
+    border-top-color: rgba(255,255,255,0.05) !important;
+    border-right-color: rgba(255,255,255,0.05) !important;
+  }
+
+  // Header
+  .main-header, .main-header.bg-white {
+    background-color: $r-dark-header-bg !important;
+    border-bottom-color: $r-dark-border !important;
+  }
+
+  .mc-wrap .mcw-line {
+    background-color: $r-dark-text-muted !important;
+  }
+
+  .menu-collapse:before {
+    background: none !important;
+  }
+
+  // Header icons
+  .header-icon-box > a i,
+  .header-icon-box .text-dark-grey {
+    color: $r-dark-text-muted !important;
+  }
+
+  // Cards
+  .card {
+    background-color: $r-dark-card !important;
+    border-color: $r-dark-border !important;
+  }
+
+  // Settings
+  .settings-sidebar {
+    background-color: $r-dark-card !important;
+    border-color: $r-dark-border !important;
+
+    li.active {
+      background-color: rgba($r-primary, 0.15) !important;
+    }
+  }
+
+  .set-btns {
+    background-color: $r-dark-card !important;
+  }
+
+  // Login
+  .login_box {
+    background-color: $r-dark-card !important;
+    border-color: $r-dark-border !important;
+  }
+
+  // Task board
+  .w-task-board-box {
+    background-color: $r-dark-card !important;
+    border-color: $r-dark-border !important;
+  }
+
+  // Placeholders
+  ::placeholder, .tagify__input:empty::before {
+    color: $r-dark-text-muted !important;
+  }
+
+  // Autofill
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $r-dark-card inset !important;
+    box-shadow: 0 0 0 30px $r-dark-card inset !important;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: $r-dark-text !important;
+  }
+
+  // Datepicker
+  .daterangepicker .calendar-table {
+    border: 1px solid $r-dark-bg !important;
+    background-color: $r-dark-bg !important;
+  }
+
+  .daterangepicker .ranges li.active {
+    background-color: $r-primary !important;
+  }
+
+  .daterangepicker:before, .daterangepicker:after {
+    border-bottom-color: $r-dark-border !important;
+  }
+
+  // FullCalendar
+  .fc .fc-button-primary.fc-button-active {
+    background-color: $r-primary !important;
+    border-color: $r-primary !important;
+    color: #fff !important;
+  }
+
+  .fc-day-today {
+    background-color: rgba($r-primary, 0.1) !important;
+  }
+
+  .fc-theme-standard .fc-listWeek-view table td {
+    border: none !important;
+  }
+
+  // Alerts
+  .alert-secondary {
+    color: $r-dark-text !important;
+    background-color: $r-dark-card !important;
+    border-color: $r-dark-border !important;
+  }
+
+  tr.alert-primary {
+    background-color: rgba($r-primary, 0.15) !important;
+  }
+
+  // Select2 dark
+  .select2-container--default .select2-selection--single {
+    background-color: $r-dark-bg !important;
+    border-color: $r-dark-border !important;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: $r-dark-text !important;
+  }
+
+  .select2-dropdown {
+    background-color: $r-dark-bg !important;
+    border-color: $r-dark-border !important;
+  }
+
+  // Spinner
+  .spinner-border {
+    border: 0.25em solid $r-dark-text !important;
+  }
+
+  // Tabs
+  .tabs .nav .nav-link.active,
+  .tabs .nav .nav-item:hover {
+    border-bottom-color: $r-primary !important;
+    color: $r-primary !important;
+  }
+
+  // Scrollbars
+  .sidebar-menu::-webkit-scrollbar {
+    width: 4px !important;
+    background: transparent !important;
+  }
+
+  .sidebar-menu::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: none !important;
+  }
+
+  // Tagify
+  .tagify__tag>div::before {
+    box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $r-dark-card inset !important;
+  }
+}
+
+// Dark scrollbar — outside body.dark-theme scope
+body.dark-theme::-webkit-scrollbar,
+body.dark-theme .show::-webkit-scrollbar,
+body.dark-theme .b-p-body::-webkit-scrollbar,
+body.dark-theme .w-task-board-panel::-webkit-scrollbar,
+body.dark-theme .settings-menu::-webkit-scrollbar,
+body.dark-theme .card-body::-webkit-scrollbar,
+body.dark-theme .t-d-inner-panel::-webkit-scrollbar {
+  width: 6px !important;
+  background: transparent !important;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb,
+body.dark-theme .show::-webkit-scrollbar-thumb,
+body.dark-theme .b-p-body::-webkit-scrollbar-thumb,
+body.dark-theme .w-task-board-panel::-webkit-scrollbar-thumb,
+body.dark-theme .settings-menu::-webkit-scrollbar-thumb,
+body.dark-theme .card-body::-webkit-scrollbar-thumb,
+body.dark-theme .t-d-inner-panel::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 3px !important;
+}

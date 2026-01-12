@@ -1,0 +1,268 @@
+// ============================================================================
+// Anagami ERP Redesign — Content Area (Aggressive Override)
+// ============================================================================
+// Targets exact classes from app.blade.php
+
+// Main container — override bg-additional-grey
+.main-container {
+  margin-left: $r-sidebar-width !important;
+  background-color: $r-body-bg !important;
+  transition: margin-left $r-transition-slow !important;
+  min-height: calc(100vh - #{$r-header-height}) !important;
+  padding: $r-space-5 $r-space-6 !important;
+
+  // Override bg-additional-grey utility
+  &.bg-additional-grey {
+    background-color: $r-body-bg !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0 !important;
+    padding: $r-space-4 !important;
+  }
+}
+
+// Content wrapper
+.content-wrapper {
+  padding: $r-space-5 0 !important;
+  background-color: $r-body-bg !important;
+
+  @include media-breakpoint-down(md) {
+    padding: $r-space-4 0 !important;
+  }
+}
+
+// Page title area
+.page-title {
+  background-color: transparent !important;
+  padding: 0 0 $r-space-4 0 !important;
+}
+
+// Admin dashboard wrapper
+.admin-dashboard {
+  background-color: $r-body-bg !important;
+}
+
+// Body wrapper
+.body-wrapper {
+  background-color: $r-body-bg !important;
+}
+
+// Override bg-additional-grey everywhere in content
+.bg-additional-grey {
+  background-color: $r-body-bg !important;
+}
+
+// Filter box area
+.filter-box {
+  background-color: $r-card-bg !important;
+  border: 1px solid $r-border-color !important;
+  border-radius: $r-border-radius !important;
+  padding: $r-space-4 $r-space-5 !important;
+  box-shadow: $r-shadow-xs !important;
+  margin-bottom: $r-space-4 !important;
+
+  .select-box {
+    .bootstrap-select .dropdown-toggle {
+      border-color: $r-border-color !important;
+      border-radius: $r-border-radius-sm !important;
+      font-size: $r-text-sm !important;
+    }
+  }
+
+  // Filter box border override
+  &.border-bottom-grey {
+    border-bottom: 1px solid $r-border-color !important;
+  }
+
+  // Duration / date inputs inside filter box
+  input.form-control,
+  .input-daterange-new,
+  .input-group {
+    border-radius: $r-border-radius-sm !important;
+  }
+
+  // Fix daterange picker input
+  .input-daterange-new {
+    border: 1px solid $r-border-color !important;
+    border-radius: $r-border-radius-sm !important;
+    padding: 6px 12px !important;
+    background-color: $r-card-bg !important;
+    font-size: $r-text-sm !important;
+  }
+
+  // Search input groups — fix stuck borders
+  .input-group {
+    border: 1px solid $r-border-color !important;
+    border-radius: $r-border-radius-sm !important;
+    overflow: hidden !important;
+    background-color: $r-card-bg !important;
+
+    .form-control {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 6px 12px !important;
+      height: auto !important;
+    }
+
+    .input-group-prepend,
+    .input-group-append {
+      .input-group-text {
+        border: none !important;
+        background-color: transparent !important;
+        padding: 6px 10px !important;
+        color: $r-text-muted !important;
+      }
+    }
+  }
+
+  // Search icon styling
+  .fa-search, .bi-search {
+    color: $r-text-muted !important;
+    font-size: 13px !important;
+  }
+
+  // Label text in filter
+  label, .f-14 {
+    font-size: $r-text-sm !important;
+    color: $r-text-secondary !important;
+    white-space: nowrap !important;
+  }
+}
+
+// All input-group elements — fix stuck borders globally
+.input-group {
+  .input-group-prepend .input-group-text,
+  .input-group-append .input-group-text {
+    border-color: $r-border-color !important;
+  }
+}
+
+// Override bg-white-shade utility
+.bg-white-shade {
+  background-color: $r-body-bg !important;
+}
+
+// Override bg-grey utility
+.bg-grey {
+  background-color: $r-body-bg !important;
+}
+
+// Override bg-light-grey utility
+.bg-light-grey {
+  background-color: $r-body-bg !important;
+}
+
+// Dashboard px-4 py-2 container override
+.main-container > .px-4 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// Ensure emp-dashboard has no extra padding (parent handles it)
+.emp-dashboard {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// Action buttons row
+.d-flex.action-bar {
+  padding: 0 !important;
+  margin-bottom: $r-space-5 !important;
+}
+
+// Spacing between sections
+.mb-5 {
+  margin-bottom: $r-section-gap !important;
+}
+
+// ---------------------------------------------------------------------------
+// Global container fixes — ensure rounded corners everywhere
+// ---------------------------------------------------------------------------
+
+// DataTables wrapper
+.w-tables {
+  border-radius: $r-border-radius !important;
+  overflow: hidden !important;
+  border: 1px solid $r-border-color !important;
+  box-shadow: none !important;
+}
+
+// Action bar (buttons row) — only in main content area
+.main-container .d-flex.flex-wrap {
+  gap: $r-space-2 !important;
+}
+
+// Ticket/stat cards
+.e-d-info {
+  border-radius: $r-border-radius !important;
+  border: 1px solid $r-border-color !important;
+  overflow: hidden !important;
+}
+
+// Override all remaining bg-amt-grey / bg-additional-grey cards
+.bg-amt-grey {
+  background-color: $r-body-bg !important;
+  border-radius: $r-border-radius !important;
+}
+
+// Chart containers
+.chart-container {
+  border-radius: $r-border-radius !important;
+}
+
+// Tab content panels
+.tab-content {
+  border-radius: 0 0 $r-border-radius $r-border-radius !important;
+}
+
+// Calendar container
+.fc {
+  border-radius: $r-border-radius !important;
+  overflow: hidden !important;
+}
+
+// Notices/announcement containers
+.notice-board {
+  border-radius: $r-border-radius !important;
+}
+
+// ---------------------------------------------------------------------------
+// Fix double borders on nested cards — card inside card should not add extra border
+// ---------------------------------------------------------------------------
+.card .card {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Content inside filter-box or card that also has b-shadow-4
+.card .b-shadow-4,
+.filter-box .b-shadow-4 {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+// Dashboard notice/widget cards inside rows
+.row > .col .card .card-body .card {
+  border: 1px solid $r-border-color !important;
+}
+
+// Dashboard section headers inside cards
+.card-body > h4,
+.card-body > h5 {
+  font-size: $r-text-md !important;
+  font-weight: 600 !important;
+  color: $r-text-primary !important;
+  margin-bottom: $r-space-4 !important;
+}
+
+// Data info boxes (stats on ticket page etc)
+.card-horizontal {
+  border-radius: $r-border-radius !important;
+}
+
+// Misc card-like containers
+.cal-info, .inv-num-date, .inv-detail {
+  border-radius: $r-border-radius !important;
+}
+
