@@ -19,7 +19,7 @@
 
 ## Технологичен стек
 
-- **Backend:** PHP 8.3, Laravel 10
+- **Backend:** PHP 8.3, Laravel 12
 - **База данни:** MariaDB 11.8 (съвместима и с MySQL 8)
 - **Frontend:** Blade, Bootstrap 4, SCSS, jQuery (без React/Vue)
 - **Пакети:** nwidart/laravel-modules, Yajra DataTables, barryvdh/laravel-dompdf, maatwebsite/excel
